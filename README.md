@@ -17,8 +17,9 @@ RGB-to-RAW reconstruction, or the reverse modeling of a camera Image Signal Proc
   <img src="assets/pipeline.png" alt="RAWFlow" width="100%">
 </div>
 
-
 ## Installation
+
+ We recommend using `conda` to create a clean environment:
 
 ```bash
 conda create -n rawflow python=3.11 -y
