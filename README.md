@@ -14,7 +14,7 @@ RGB-to-RAW reconstruction, or the reverse modeling of a camera Image Signal Proc
 ## Pipeline
 
 <div align="center">
-  <img src="assets/pipeline.png" alt="RAWFlow" width="100%">
+  <img src="assets/rawflow_pipeline.png" alt="RAWFlow" width="100%">
 </div>
 
 ## Installation
