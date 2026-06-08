@@ -1,0 +1,23 @@
+data:
+  dataset: fivek
+  camera: Canon_EOS_5D
+  data_dir: ./data/fivek_dataset_processed/fivek
+  file_list_val: Canon_EOS_5D_test.txt
+  rgb_size: "2X"
+  num_workers: 4
+
+checkpoint: ./ckpt/canon_eos_5d.pth
+camera: Canon_EOS_5D
+use_fusion: false
+context_size: 256
+patch_size: 512
+overlap: 16
+device: cuda:0
+batch_size: 1
+seed: 42
+limit: 0
+
+output_dir: ./test_output/rawflow_Canon_EOS_5D
+save_visualizations: true
+save_raw_outputs: false
+visualization_quality: 95

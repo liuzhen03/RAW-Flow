@@ -1,0 +1,42 @@
+data:
+  dataset: fivek
+  camera: NIKON_D700
+  data_dir: ./data/fivek_dataset_processed/fivek_patches_3_complete_dataset
+  file_list_train: NIKON_D700_train.txt
+  file_list_val: NIKON_D700_test.txt
+  patch_size: 256
+  rgb_size: "2X"
+  use_context: 256
+  use_coordinate: false
+  is_full: false
+  num_workers: 4
+
+trainer:
+  epochs: 200
+  batch_size: 8
+  lr: 1.0e-4
+  seed: 42
+  clip_grad_norm: 1.0
+  val_freq: 1
+  quick_val_samples: 20
+  device: cuda:0
+  log_interval: 200
+
+paths:
+  save_dir: checkpoints/stage2_flow_NIKON_D700
+  stage1_ckpt: checkpoints/stage1_ae_NIKON_D700/best_model.pth
+  resume: null
+
+model:
+  channels: 96
+  down_channels: 6
+  flow_unet_channels: 96
+  cond_unet_channels: 48
+  unet_nums_res: 3
+  flow_unet_nums_res: 3
+  flow_steps: 20
+  flow_matching_mode: rgb_latent
+  use_cond_loss: false
+
+losses:
+  feature_weight: 0.5

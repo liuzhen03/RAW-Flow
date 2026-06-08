@@ -1,0 +1,23 @@
+data:
+  dataset: pascalraw
+  camera: PASCALRAW
+  data_dir: ./data/PASCALRAW_processed/pascalraw
+  file_list_val: PASCALRAW_test.txt
+  rgb_size: "2X"
+  num_workers: 4
+
+checkpoint: ./ckpt/pascalraw.pth
+camera: PASCALRAW
+use_fusion: false
+context_size: 256
+patch_size: 512
+overlap: 16
+device: cuda:0
+batch_size: 1
+seed: 42
+limit: 0
+
+output_dir: ./test_output/rawflow_PASCALRAW
+save_visualizations: true
+save_raw_outputs: false
+visualization_quality: 95

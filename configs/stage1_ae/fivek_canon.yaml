@@ -1,0 +1,36 @@
+data:
+  dataset: fivek
+  camera: Canon_EOS_5D
+  data_dir: ./data/fivek_dataset_processed/fivek_patches_3_complete_dataset
+  file_list_train: Canon_EOS_5D_train.txt
+  file_list_val: Canon_EOS_5D_test.txt
+  patch_size: 256
+  rgb_size: "2X"
+  use_context: 0
+  use_coordinate: false
+  is_full: false
+  num_workers: 4
+
+trainer:
+  epochs: 300
+  batch_size: 8
+  lr: 1.0e-4
+  seed: 42
+  clip_grad_norm: 1.0
+  patience: 5
+  val_freq: 1
+  device: cuda:0
+  log_interval: 200
+
+paths:
+  save_dir: checkpoints/stage1_ae_Canon_EOS_5D
+  resume: null
+
+model:
+  channels: 96
+  down_channels: 6
+
+losses:
+  l2_weight: 1.0
+  perceptual_weight: 0.01
+  feature_weight: 0.1
